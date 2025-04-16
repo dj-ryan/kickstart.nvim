@@ -290,31 +290,31 @@ require('lazy').setup({
 
   ---@type LazySpec
   {
-    "mikavilpas/yazi.nvim",
-    event = "VeryLazy",
+    'mikavilpas/yazi.nvim',
+    event = 'VeryLazy',
     dependencies = {
       -- check the installation instructions at
       -- https://github.com/folke/snacks.nvim
-      "folke/snacks.nvim"
+      'folke/snacks.nvim',
     },
     keys = {
       -- 👇 in this section, choose your own keymappings!
       {
-        "<leader>-",
-        mode = { "n", "v" },
-        "<cmd>Yazi<cr>",
-        desc = "Open yazi at the current file",
+        '<leader>-',
+        mode = { 'n', 'v' },
+        '<cmd>Yazi<cr>',
+        desc = 'Open yazi at the current file',
       },
       {
         -- Open in the current working directory
-        "<leader>cw",
-        "<cmd>Yazi cwd<cr>",
+        '<leader>cw',
+        '<cmd>Yazi cwd<cr>',
         desc = "Open the file manager in nvim's working directory",
       },
       {
-        "<c-up>",
-        "<cmd>Yazi toggle<cr>",
-        desc = "Resume the last yazi session",
+        '<c-up>',
+        '<cmd>Yazi toggle<cr>',
+        desc = 'Resume the last yazi session',
       },
     },
     ---@type YaziConfig | {}
@@ -322,7 +322,7 @@ require('lazy').setup({
       -- if you want to open yazi instead of netrw, see below for more info
       open_for_directories = false,
       keymaps = {
-        show_help = "<f1>",
+        show_help = '<f1>',
       },
     },
     -- 👇 if you use `open_for_directories=true`, this is recommended
@@ -332,7 +332,6 @@ require('lazy').setup({
       vim.g.loaded_netrwPlugin = 1
     end,
   },
-
 
   -- NOTE: Plugins can also be configured to run Lua code when they are loaded.
   --
@@ -1048,12 +1047,12 @@ require('lazy').setup({
   --  Here are some example plugins that I've included in the Kickstart repository.
   --  Uncomment any of the lines below to enable them (you will need to restart nvim).
   --
-  -- require 'kickstart.plugins.debug',
-  -- require 'kickstart.plugins.indent_line',
-  -- require 'kickstart.plugins.lint',
-  -- require 'kickstart.plugins.autopairs',
-  -- require 'kickstart.plugins.neo-tree',
-  -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
+  require 'kickstart.plugins.debug',
+  require 'kickstart.plugins.indent_line',
+  require 'kickstart.plugins.lint',
+  require 'kickstart.plugins.autopairs',
+  require 'kickstart.plugins.neo-tree',
+  require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
