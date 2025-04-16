@@ -199,6 +199,9 @@ vim.keymap.set('n', '<leader>rs', ':source ~/mysession.vim<CR>', { desc = 'Resto
 
 vim.keymap.set('n', '<C-q>', '<C-V>', { desc = 'Enter visual block mode' })
 
+vim.keymap.set('n', '<leader>H', ":lua require('harpoon.ui').toggle_quick_menu()<CR>")
+vim.keymap.set('n', '<leader>m', ":lua require('harpoon.mark').add_file()<CR>")
+
 -- NOTE: Some terminals have coliding keymaps or are not able to send distinct keycodes
 -- vim.keymap.set("n", "<C-S-h>", "<C-w>H", { desc = "Move window to the left" })
 -- vim.keymap.set("n", "<C-S-l>", "<C-w>L", { desc = "Move window to the right" })
@@ -279,6 +282,10 @@ require('lazy').setup({
         changedelete = { text = '~' },
       },
     },
+  },
+
+  {
+    'ThePrimeagen/harpoon',
   },
 
   -- NOTE: Plugins can also be configured to run Lua code when they are loaded.
