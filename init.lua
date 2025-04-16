@@ -196,6 +196,9 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 
 vim.keymap.set('n', '<leader>ms', ':mksession! ~/mysession.vim<CR>', { desc = 'Save session' })
 vim.keymap.set('n', '<leader>rs', ':source ~/mysession.vim<CR>', { desc = 'Restore session' })
+
+vim.keymap.set('n', '<C-q>', '<C-V>', { desc = 'Enter visual block mode' })
+
 -- NOTE: Some terminals have coliding keymaps or are not able to send distinct keycodes
 -- vim.keymap.set("n", "<C-S-h>", "<C-w>H", { desc = "Move window to the left" })
 -- vim.keymap.set("n", "<C-S-l>", "<C-w>L", { desc = "Move window to the right" })
